@@ -26,6 +26,8 @@
         background-color: $aqua;
         position: relative;
         overflow: hidden;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         .container div {
             width: calc(50% - 6rem);
@@ -44,8 +46,103 @@
 
         img {
             position: absolute;
-            right: 10%;
+            right: 5%;
             z-index: 998;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        header {
+            .container div {
+                width: calc(50% - 4rem);
+            }
+
+            img {
+                right: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1315px) {
+        header {
+            .container div {
+                width: calc(50% - 2rem);
+            }
+
+            img {
+                right: -5%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        header {
+            .container div {
+                width: 50%;
+
+                h1 {
+                    font-size: 3rem;
+                    margin-top: 12rem;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    margin-bottom: 12rem;
+                }
+            }
+
+            img {
+                width: 40%;
+                right: 5%;
+                bottom: -15%;
+            }
+        }
+    }
+
+    @media screen and (max-width: $navbarBreakpoint) {
+        header {
+            .container div {
+                width: 65%;
+
+                h1 {
+                    font-size: 3rem;
+                    margin-top: 5rem;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    margin-bottom: 8rem;
+                }
+            }
+
+            img {
+                width: 40%;
+                right: 0;
+                bottom: -35%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        header {
+            .container div {
+                width: 100%;
+                text-align: center;
+
+                h1 {
+                    font-size: 3rem;
+                    margin-top: 5rem;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    margin-bottom: 8rem;
+                }
+            }
+
+            img {
+                display: none;
+            }
         }
     }
 </style>

@@ -39,7 +39,7 @@
         width: 100%;
 
         img {
-            height: $headerLogoHeight;
+            height: $navbarLogoHeight;
             display: inline-block;
             z-index: 999;
         }
@@ -71,10 +71,10 @@
         width: 100%;
         top: 0;
         left: 0;
-        height: calc(2rem + #{$headerLogoHeight});
+        height: calc(2rem + #{$navbarLogoHeight});
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: $navbarBreakpoint) {
 
         .nav-background {
             display: none;
