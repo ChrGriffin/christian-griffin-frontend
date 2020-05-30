@@ -35,6 +35,8 @@
             h1 {
                 margin-top: 16rem;
                 font-size: 4rem;
+                letter-spacing: -2px;
+                font-weight: bold;
             }
 
             h2 {

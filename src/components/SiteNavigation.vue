@@ -58,6 +58,7 @@
                         text-decoration: none;
                         color: $white;
                         font-weight: bold;
+                        font-size: 1.2rem;
                     }
                 }
             }

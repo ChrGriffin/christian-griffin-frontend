@@ -16,6 +16,7 @@
         -moz-osx-font-smoothing: grayscale;
         color: $white;
         min-height: 3000px;
+        letter-spacing: -1px;
     }
 
     a {
