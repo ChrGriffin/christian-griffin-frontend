@@ -15,6 +15,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: $white;
+        min-height: 3000px;
     }
 
     a {
@@ -29,6 +30,19 @@
 
     header, section {
         padding: $sectionPadding;
+    }
+
+    header {
+        padding-top: $sectionPadding * 2;
+    }
+
+    .container {
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+
+    .flex {
+        display: flex;
     }
 </style>
 <script>
