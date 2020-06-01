@@ -1,5 +1,7 @@
 export default interface Job {
     company: string;
-    image: string;
+    url: string;
     description: string;
+    from: Date;
+    to: Date|null;
 }

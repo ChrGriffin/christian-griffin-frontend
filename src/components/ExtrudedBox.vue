@@ -10,7 +10,6 @@
     @Component
     export default class ExtrudedBox extends Vue {
         @Prop() public backgroundColor!: string;
-        @Prop() public borderColor!: string;
     }
 </script>
 
@@ -46,8 +45,8 @@
 
         &.background-grey-blue {
 
-            border-top: 10px solid $darkGreyBlue;
             border-right: 10px solid $darkGreyBlue;
+            border-top: 10px solid $grey;
 
             &::before {
                 background-color: $greyBlue;

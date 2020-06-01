@@ -1,12 +1,11 @@
 <template>
     <div class="work-experience-item">
         <extruded-box background-color="grey-blue">
-            <article class="flex">
-                <img :src="job.image" :alt="`${job.company} logo`" />
-                <div>
-                    <h4>{{ job.company }}</h4>
-                </div>
-            </article>
+            <div>
+                <h4>{{ job.company }}</h4>
+                <h5>{{ job.from.toDateString() }} - {{ (job.to === null ? 'Present' : job.to.toDateString()) }}</h5>
+                <p>{{ job.description }}</p>
+            </div>
         </extruded-box>
     </div>
 </template>
@@ -41,8 +40,18 @@
             margin-right: 0;
         }
 
-        img {
-            margin: -1rem 1rem -1rem -1rem;
+        h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        h5 {
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 1rem;
         }
     }
 </style>
