@@ -2,7 +2,7 @@
     <extruded-box background-color="grey-blue">
         <div>
             <h4>{{ job.company }}</h4>
-            <h5>{{ job.from.toDateString() }} - {{ (job.to === null ? 'Present' : job.to.toDateString()) }}</h5>
+            <h5>{{ timeframeString }}</h5>
             <p>{{ job.description }}</p>
         </div>
     </extruded-box>
@@ -12,12 +12,17 @@
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import ExtrudedBox from '@/components/ExtrudedBox.vue';
     import Job from '@/interfaces/Job';
+    import {dateToMonthString} from '@/helpers/dates';
 
     @Component({
         components: {ExtrudedBox},
     })
     export default class WorkExperienceItem extends Vue {
         @Prop() public job!: Job;
+
+        get timeframeString(): string {
+            return `${dateToMonthString(this.job.from)} - ${(this.job.to === null ? 'Present' : dateToMonthString(this.job.to))}`
+        }
     }
 </script>
 
