@@ -27,7 +27,7 @@
             position: absolute;
             width: 21px;
             height: 21px;
-            top: -25px;
+            top: -24px;
             left: -13px;
             transform: rotate(45deg);
         }
@@ -39,7 +39,7 @@
             width: 21px;
             height: 21px;
             bottom: -13px;
-            right: -25px;
+            right: -24px;
             transform: rotate(45deg);
         }
 
