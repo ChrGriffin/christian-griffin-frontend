@@ -29,12 +29,15 @@
         }
     }
 
-    header, section {
-        padding: $sectionPadding;
+    p {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1.25;
+        margin-bottom: 2rem;
     }
 
-    header {
-        padding-top: $sectionPadding * 2;
+    section {
+        padding: $sectionPadding;
     }
 
     .container {
@@ -44,6 +47,32 @@
 
     .flex {
         display: flex;
+    }
+
+    section.white {
+        color: $black;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        font-size: 1.4rem;
+
+        li {
+            padding-bottom: 0.2rem;
+        }
     }
 </style>
 <script>

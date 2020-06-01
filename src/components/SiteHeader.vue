@@ -15,7 +15,7 @@
     import {Component, Vue} from 'vue-property-decorator';
 
     @Component
-    export default class HelloWorld extends Vue {
+    export default class SiteHeader extends Vue {
     }
 </script>
 
@@ -26,8 +26,7 @@
         background-color: $aqua;
         position: relative;
         overflow: hidden;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 4rem 2rem 2rem;
 
         .container div {
             width: calc(50% - 6rem);
