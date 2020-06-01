@@ -1,13 +1,11 @@
 <template>
-    <div class="work-experience-item">
-        <extruded-box background-color="grey-blue">
-            <div>
-                <h4>{{ job.company }}</h4>
-                <h5>{{ job.from.toDateString() }} - {{ (job.to === null ? 'Present' : job.to.toDateString()) }}</h5>
-                <p>{{ job.description }}</p>
-            </div>
-        </extruded-box>
-    </div>
+    <extruded-box background-color="grey-blue">
+        <div>
+            <h4>{{ job.company }}</h4>
+            <h5>{{ job.from.toDateString() }} - {{ (job.to === null ? 'Present' : job.to.toDateString()) }}</h5>
+            <p>{{ job.description }}</p>
+        </div>
+    </extruded-box>
 </template>
 
 <script lang="ts">
@@ -26,7 +24,7 @@
 <style scoped lang="scss">
     @import './../assets/scss/variables';
 
-    .work-experience-item {
+    .box {
         flex: 1;
         margin: 0 1rem;
         color: $black;
