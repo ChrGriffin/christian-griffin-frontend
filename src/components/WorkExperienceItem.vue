@@ -21,7 +21,7 @@
         @Prop() public job!: Job;
 
         get timeframeString(): string {
-            return `${dateToMonthString(this.job.from)} - ${(this.job.to === null ? 'Present' : dateToMonthString(this.job.to))}`
+            return `${dateToMonthString(this.job.from)} - ${(this.job.to === null ? 'Present' : dateToMonthString(this.job.to))}`;
         }
     }
 </script>
