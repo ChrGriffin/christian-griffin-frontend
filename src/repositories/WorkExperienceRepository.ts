@@ -7,19 +7,19 @@ export default class WorkExperienceRepository {
             resolve([
                 {
                     company: 'Vehikl',
-                    image: '',
+                    image: require('@/assets/images/vehikl_logo.jpg'),
                     description: '',
                 },
                 {
                     company: 'Arcane',
-                    image: '',
+                    image: require('@/assets/images/arcane_logo.jpg'),
                     description: '',
                 },
                 {
                     company: 'The Minery',
-                    image: '',
+                    image: require('@/assets/images/minery_logo.jpg'),
                     description: '',
-                }
+                },
             ]);
         });
     }

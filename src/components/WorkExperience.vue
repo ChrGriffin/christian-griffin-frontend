@@ -3,7 +3,7 @@
         <div class="container">
             <h3>It's been a privilege to work with these great companies.</h3>
             <div class="flex">
-                <work-experience-item v-for="job in jobs" :job="job" />
+                <work-experience-item v-for="job in jobs" :job="job" :key="job.company" />
             </div>
         </div>
     </section>

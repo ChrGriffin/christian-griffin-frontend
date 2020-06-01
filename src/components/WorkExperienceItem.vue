@@ -1,12 +1,12 @@
 <template>
     <div class="work-experience-item">
         <extruded-box background-color="grey-blue">
-            <div class="flex">
-                <img />
+            <article class="flex">
+                <img :src="job.image" :alt="`${job.company} logo`" />
                 <div>
                     <h4>{{ job.company }}</h4>
                 </div>
-            </div>
+            </article>
         </extruded-box>
     </div>
 </template>
@@ -29,7 +29,7 @@
 
     .work-experience-item {
         flex: 1;
-        margin: 0 2rem;
+        margin: 0 1rem;
         color: $black;
         text-align: left;
 
@@ -39,6 +39,10 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        img {
+            margin: -1rem 1rem -1rem -1rem;
         }
     }
 </style>
