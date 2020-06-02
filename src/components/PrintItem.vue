@@ -1,10 +1,10 @@
 <template>
     <extruded-box background-color="white">
-        <div>
+        <a target="_blank" :href="print.url">
             <img :src="print.image" :alt="`${print.title} photo`" />
             <h4>{{ print.title }}</h4>
             <h5>${{ print.price.toFixed(2) }} USD</h5>
-        </div>
+        </a>
     </extruded-box>
 </template>
 
@@ -38,18 +38,29 @@
             margin-right: 0;
         }
 
+        a {
+            display: block;
+            color: $black;
+            border-bottom: 0;
+
+            &:hover {
+                border-bottom: 0;
+            }
+        }
+
         img {
-            max-width: calc(100%);
-            //margin: -1rem -1rem 1rem -1rem;
-            margin-bottom: 1rem;
+            max-width: calc(100% + 2rem);
+            margin: -1rem -1rem 1rem -1rem;
         }
 
         h4 {
             margin-bottom: 0.5rem;
+            white-space: nowrap;
         }
 
         h5 {
             margin-bottom: 0;
+            font-weight: normal;
         }
     }
 </style>

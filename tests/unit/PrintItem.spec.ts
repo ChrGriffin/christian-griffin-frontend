@@ -36,4 +36,9 @@ describe('PrintItem.vue', () => {
 
     expect(printItem.find('h5').text()).to.equal('$20.00 USD');
   });
+
+  it('links to the print url', () => {
+    expect(printItem.find('a').exists()).to.equal(true);
+    expect(printItem.find('a').attributes().href).to.equal('https://ashirt.com');
+  });
 });

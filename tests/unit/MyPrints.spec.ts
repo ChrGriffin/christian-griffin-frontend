@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import flushPromises from 'flush-promises';
 import Print from '@/interfaces/Print';
-import MyPrints from "@/components/MyPrints.vue";
-import PrintItem from "@/components/PrintItem.vue";
+import MyPrints from '@/components/MyPrints.vue';
+import PrintItem from '@/components/PrintItem.vue';
 
 const localVue = createLocalVue();
 localVue.directive('match-heights', () => { /**/ });

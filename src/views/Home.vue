@@ -16,10 +16,10 @@
     import WorkExperience from '@/components/WorkExperience.vue';
     import AboutMe from '@/components/AboutMe.vue';
     import ContactMe from '@/components/ContactMe.vue';
-    import MyPrints from "@/components/MyPrints.vue";
+    import MyPrints from '@/components/MyPrints.vue';
 
     @Component({
-        components: {MyPrints, ContactMe, SiteHeader, ToolKit, WorkExperience, AboutMe },
+        components: { SiteHeader, ToolKit, WorkExperience, AboutMe, ContactMe, MyPrints },
     })
     export default class Home extends Vue {
     }
