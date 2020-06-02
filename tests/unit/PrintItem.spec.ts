@@ -28,4 +28,12 @@ describe('PrintItem.vue', () => {
     expect(printItem.find('img').exists()).to.equal(true);
     expect(printItem.find('img').attributes().src).to.equal('https://ashirt.com/image.jpg');
   });
+
+  it('renders the price to two decimal places', () => {
+    const integerPrint = Object.assign({}, print);
+    integerPrint.price = 20;
+    printItem.setProps({print: integerPrint});
+
+    expect(printItem.find('h5').text()).to.equal('$20.00 USD');
+  });
 });

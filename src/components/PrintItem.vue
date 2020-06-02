@@ -3,7 +3,7 @@
         <div>
             <img :src="print.image" :alt="`${print.title} photo`" />
             <h4>{{ print.title }}</h4>
-            <h5>${{ print.price }} USD</h5>
+            <h5>${{ print.price.toFixed(2) }} USD</h5>
         </div>
     </extruded-box>
 </template>
