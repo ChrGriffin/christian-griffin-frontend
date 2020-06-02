@@ -7,20 +7,20 @@
                     <div class="flex">
                         <div>
                             <label for="contact-name">Name</label>
-                            <input id="contact-name" name="name" type="text">
+                            <input v-model="name" id="contact-name" name="name" type="text">
                         </div>
 
                         <div>
                             <label for="contact-email">Email</label>
-                            <input id="contact-email" name="email" type="email">
+                            <input v-model="email" id="contact-email" name="email" type="email">
                         </div>
                     </div>
 
                     <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" rows="12"></textarea>
+                    <textarea v-model="message" id="contact-message" name="message" rows="12"></textarea>
 
                     <div class="button-container">
-                        <button type="submit">Send</button>
+                        <button type="submit" @click="send">Send</button>
                     </div>
                 </form>
             </div>
@@ -30,9 +30,35 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    import axios from 'axios';
 
     @Component
     export default class ContactMe extends Vue {
+
+        public name: string = '';
+        public email: string = '';
+        public message: string = '';
+
+        public send(): void {
+            axios.post(
+                '/',
+                this.encode({
+                    'form-name': 'contact',
+                    'name': this.name,
+                    'email': this.email,
+                    'message': this.message,
+                }),
+                {
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                },
+            );
+        }
+
+        private encode(data: any) {
+            return Object.keys(data)
+                .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+                .join('&');
+        }
     }
 </script>
 
