@@ -6,21 +6,51 @@
                 <form>
                     <div class="flex">
                         <div>
-                            <label for="contact-name">Name</label>
-                            <input v-model="name" id="contact-name" name="name" type="text">
+                            <label
+                                    for="contact-name"
+                                    :class="(this.errors.name.length > 0 ? 'error' : '')">
+                                Name
+                            </label>
+                            <input
+                                    v-model="name"
+                                    @blur="validateField('name')"
+                                    id="contact-name"
+                                    :class="(this.errors.name.length > 0 ? 'error' : '')"
+                                    name="name"
+                                    type="text" />
                         </div>
 
                         <div>
-                            <label for="contact-email">Email</label>
-                            <input v-model="email" id="contact-email" name="email" type="email">
+                            <label
+                                    for="contact-email"
+                                    :class="(this.errors.email.length > 0 ? 'error' : '')">
+                                Email
+                            </label>
+                            <input
+                                    v-model="email"
+                                    @blur="validateField('email')"
+                                    id="contact-email" name="email"
+                                    :class="(this.errors.email.length > 0 ? 'error' : '')"
+                                    type="email" />
                         </div>
                     </div>
 
-                    <label for="contact-message">Message</label>
-                    <textarea v-model="message" id="contact-message" name="message" rows="12"></textarea>
+                    <label
+                            for="contact-message"
+                            :class="(this.errors.message.length > 0 ? 'error' : '')">
+                        Message
+                    </label>
+                    <textarea
+                            v-model="message"
+                            @blur="validateField('message')"
+                            id="contact-message"
+                            :class="(this.errors.message.length > 0 ? 'error' : '')"
+                            name="message"
+                            rows="12">
+                    </textarea>
 
                     <div class="button-container">
-                        <button type="submit" @click="send">Send</button>
+                        <button type="submit" @click="send" :disabled="disabled">Send</button>
                     </div>
                 </form>
             </div>
@@ -31,15 +61,41 @@
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
     import axios from 'axios';
+    import validate from 'validate.js';
+    import ContactFormRules from '@/rules/ContactForm';
 
-    @Component
+    @Component({})
     export default class ContactMe extends Vue {
 
         public name: string = '';
         public email: string = '';
         public message: string = '';
+        public disabled: boolean = true;
+        private rules: ContactFormRules = new ContactFormRules();
+
+        private errors = {
+            name: [],
+            email: [],
+            message: [],
+        };
+
+        public validateField(field: keyof ContactFormRules): void {
+            const errors = validate.single(this[field] as string, this.rules[field]);
+            if (typeof errors === 'undefined') {
+                this.errors[field] = [];
+                this.enableOrDisableSubmission();
+                return;
+            }
+
+            this.errors[field] = errors;
+            this.enableOrDisableSubmission();
+        }
 
         public send(): void {
+            if(this.disabled) {
+                return;
+            }
+
             axios.post(
                 '/',
                 this.encode({
@@ -52,6 +108,12 @@
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 },
             );
+        }
+
+        private enableOrDisableSubmission(): void {
+            this.disabled = this.errors.name.length > 0
+                || this.errors.email.length > 0
+                || this.errors.message.length > 0;
         }
 
         private encode(data: any) {
@@ -95,16 +157,24 @@
         font-weight: bold;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
+
+        &.error {
+            color: $red;
+        }
     }
 
     input, textarea {
         display: block;
-        width: calc(100% - 0.8rem);
-        border: 0;
+        width: calc(100% - 0.8rem - 6px);
         font-size: 1.2rem;
         padding: 0.4rem;
         margin-bottom: 2rem;
         font-family: inherit;
+        border: 3px solid white;
+
+        &.error {
+            border: 3px solid $red;
+        }
     }
 
     .button-container {

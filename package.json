@@ -12,6 +12,7 @@
     "axios": "^0.19.2",
     "core-js": "^2.6.5",
     "reset-css": "^5.0.1",
+    "validate.js": "^0.13.1",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-match-heights": "^0.1.1",
