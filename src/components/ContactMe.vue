@@ -88,7 +88,20 @@
             font-size: 1.2rem;
             padding: 0.4rem 1.8rem;
             background-color: $white;
-            border: 0;
+            border: 4px solid $white;
+            color: $black;
+
+            &:not([disabled]):hover {
+                cursor: pointer;
+                background-color: $darkGreyBlue;
+                border-color: $white;
+                color: $white;
+            }
+
+            &:disabled {
+                background-color: $grey;
+                border-color: $grey;
+            }
         }
     }
 </style>
