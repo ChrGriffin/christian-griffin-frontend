@@ -1,10 +1,10 @@
 <template>
     <extruded-box background-color="grey-blue">
-        <div>
+        <a target="_blank" :href="job.url">
             <h4>{{ job.company }}</h4>
             <h5>{{ timeframeString }}</h5>
             <p>{{ job.description }}</p>
-        </div>
+        </a>
     </extruded-box>
 </template>
 
@@ -41,6 +41,17 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        a {
+            display: block;
+            color: $black;
+            border-bottom: 0;
+            font-weight: normal;
+
+            &:hover {
+                border-bottom: 0;
+            }
         }
 
         h4 {

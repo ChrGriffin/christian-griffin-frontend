@@ -42,6 +42,7 @@
             display: block;
             color: $black;
             border-bottom: 0;
+            font-weight: normal;
 
             &:hover {
                 border-bottom: 0;
@@ -60,7 +61,6 @@
 
         h5 {
             margin-bottom: 0;
-            font-weight: normal;
         }
     }
 </style>

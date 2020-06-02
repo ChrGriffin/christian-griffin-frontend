@@ -37,4 +37,9 @@ describe('WorkExperienceItem.vue', () => {
 
     expect(workExperienceItem.find('h5').text()).to.equal('January 2012 - Present');
   });
+
+  it('links to the company url', () => {
+    expect(workExperienceItem.find('a').exists()).to.equal(true);
+    expect(workExperienceItem.find('a').attributes().href).to.equal('https://witcher.rv');
+  });
 });
