@@ -15,7 +15,6 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: $white;
-        min-height: 3000px;
         letter-spacing: -1px;
     }
 
@@ -34,6 +33,10 @@
         letter-spacing: 0;
         line-height: 1.25;
         margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     section {
