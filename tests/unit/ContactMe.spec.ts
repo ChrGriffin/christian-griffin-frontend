@@ -52,10 +52,9 @@ describe('WorkExperience.vue', () => {
 
   invalidFields.forEach((dataset) => {
     it(`adds error class to invalid field on blur with dataset: ${dataset.description}`, () => {
-
       const contactMe = shallowMount(ContactMe);
       const formInput = contactMe.find(`[name="${dataset.field}"]`);
-      const formLabel = contactMe.find(`label[for="contact-${dataset.field}"]`)
+      const formLabel = contactMe.find(`label[for="contact-${dataset.field}"]`);
       expect(formInput.element.classList.contains('error')).to.equal(false);
       expect(formLabel.element.classList.contains('error')).to.equal(false);
 
@@ -64,6 +63,22 @@ describe('WorkExperience.vue', () => {
       expect(formInput.element.classList.contains('error')).to.equal(true);
       expect(formLabel.element.classList.contains('error')).to.equal(true);
     });
+  });
+
+  it('disables submission by default', () => {
+    const contactMe = shallowMount(ContactMe);
+
+    expect(contactMe.vm.$data.disabled).to.equal(true);
+    expect(contactMe.find('button').attributes().disabled).to.equal('disabled');
+  });
+
+  it('enables submission once valid data is entered', () => {
+    const contactMe = shallowMount(ContactMe);
+
+    enterFormInfo(contactMe, validFields);
+
+    expect(contactMe.vm.$data.disabled).to.equal(false);
+    expect(contactMe.find('button').attributes().disabled).to.equal(undefined);
   });
 
   it('posts to the app root when user clicks send button', async () => {
