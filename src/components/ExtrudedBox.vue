@@ -18,7 +18,6 @@
 
     .box {
         padding: 1rem;
-        background-color: $white;
         position: relative;
 
         &::before {
@@ -45,6 +44,7 @@
 
         &.background-grey-blue {
 
+            background-color: $white;
             border-right: 10px solid $darkGreyBlue;
             border-top: 10px solid $grey;
 
@@ -54,6 +54,21 @@
 
             &::after {
                 background-color: $greyBlue;
+            }
+        }
+
+        &.background-white {
+
+            background-color: $grey;
+            border-right: 10px solid $darkGreyBlue;
+            border-top: 10px solid $greyBlue;
+
+            &::before {
+                background-color: $white;
+            }
+
+            &::after {
+                background-color: $white;
             }
         }
     }

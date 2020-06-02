@@ -16,6 +16,7 @@
         -moz-osx-font-smoothing: grayscale;
         color: $white;
         letter-spacing: -1px;
+        background-color: $white;
     }
 
     a {
@@ -66,6 +67,12 @@
         font-size: 1.4rem;
         font-weight: bold;
         margin-bottom: 1rem;
+    }
+
+    h5 {
+        margin-bottom: 1rem;
+        letter-spacing: -0.5px;
+        font-style: italic;
     }
 
     ul {

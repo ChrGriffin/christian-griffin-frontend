@@ -5,6 +5,7 @@
         <work-experience />
         <about-me />
         <contact-me />
+        <my-prints />
     </div>
 </template>
 
@@ -15,9 +16,10 @@
     import WorkExperience from '@/components/WorkExperience.vue';
     import AboutMe from '@/components/AboutMe.vue';
     import ContactMe from '@/components/ContactMe.vue';
+    import MyPrints from "@/components/MyPrints.vue";
 
     @Component({
-        components: {ContactMe, SiteHeader, ToolKit, WorkExperience, AboutMe },
+        components: {MyPrints, ContactMe, SiteHeader, ToolKit, WorkExperience, AboutMe },
     })
     export default class Home extends Vue {
     }
