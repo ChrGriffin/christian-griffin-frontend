@@ -2,8 +2,21 @@
     <div id="app">
         <site-navigation />
         <router-view />
+        <site-footer />
     </div>
 </template>
+
+<script>
+    import { Component, Vue } from 'vue-property-decorator';
+    import SiteNavigation from '@/components/SiteNavigation';
+    import SiteFooter from '@/components/SiteFooter';
+
+    @Component({
+        components: { SiteNavigation, SiteFooter },
+    })
+    export default class App extends Vue {
+    }
+</script>
 
 <style lang="scss">
     @import '~reset-css/reset.css';
@@ -85,13 +98,3 @@
         }
     }
 </style>
-<script>
-    import { Component, Vue } from 'vue-property-decorator';
-    import SiteNavigation from '@/components/SiteNavigation';
-
-    @Component({
-        components: { SiteNavigation },
-    })
-    export default class App extends Vue {
-    }
-</script>

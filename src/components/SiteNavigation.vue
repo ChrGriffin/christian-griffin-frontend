@@ -49,6 +49,7 @@
             z-index: 999;
 
             ul {
+                padding-left: 0;
 
                 li {
                     display: inline-block;
