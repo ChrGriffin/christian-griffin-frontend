@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
+    import {Component, Prop, Vue} from 'vue-property-decorator';
     import WorkExperienceItem from '@/components/WorkExperienceItem.vue';
     import Job from '@/interfaces/Job';
     import WorkExperienceRepository from '@/repositories/WorkExperienceRepository';
@@ -19,10 +19,17 @@
         components: {WorkExperienceItem},
     })
     export default class WorkExperience extends Vue {
+
+        @Prop({
+            default: () => {
+                return new WorkExperienceRepository();
+            },
+        }) public workExperienceRepository!: WorkExperienceRepository;
+
         public jobs: Job[] = [];
 
         public async mounted() {
-            this.jobs = await (new WorkExperienceRepository()).get();
+            this.jobs = await this.workExperienceRepository.get();
         }
     }
 </script>
