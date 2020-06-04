@@ -13,5 +13,5 @@ export const getInstagramPosts = https.onRequest(async (request, response) => {
         return transformer.transform(post);
     });
 
-    response.send(posts);
+    response.contentType('application/json').send(posts);
 });

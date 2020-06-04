@@ -27,10 +27,16 @@ describe('firebase.getInstagramPosts', () => {
 
     it('returns a JSON response with Instagram posts', (done) => {
         // @ts-ignore
-        getInstagramPosts({}, { send: (content: []) => {
-            expect(content).to.deep.equal(require('./fixtures/transformed_instagram_api_response.json'));
-            done();
-        }});
+        getInstagramPosts({}, {
+            send: (content: []) => {
+                expect(content).to.deep.equal(require('./fixtures/transformed_instagram_api_response.json'));
+                done();
+            },
+            contentType(type: string) {
+                expect(type).to.equal('application/json');
+                return this;
+            }
+        });
     });
 
     afterEach(() => {
