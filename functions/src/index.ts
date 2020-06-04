@@ -13,5 +13,5 @@ export const getInstagramPosts = https.onRequest(async (request, response) => {
         return transformer.transform(post);
     });
 
-    response.contentType('application/json').send(posts);
+    response.header('Access-Control-Allow-Origin', '*').contentType('application/json').send(posts);
 });

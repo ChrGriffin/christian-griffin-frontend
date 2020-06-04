@@ -35,6 +35,11 @@ describe('firebase.getInstagramPosts', () => {
             contentType(type: string) {
                 expect(type).to.equal('application/json');
                 return this;
+            },
+            header(field: string, value: string) {
+                expect(field).to.equal('Access-Control-Allow-Origin');
+                expect(value).to.equal('*');
+                return this;
             }
         });
     });
