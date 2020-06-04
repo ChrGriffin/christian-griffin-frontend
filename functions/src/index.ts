@@ -1,8 +1,10 @@
-import * as functions from 'firebase-functions';
+import { https, config } from 'firebase-functions';
+import axios from 'axios';
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+export const getInstagramPosts = https.onRequest(async(request, response) => {
+ await axios.get(
+     `https://graph.instagram.com/me/media?fields=id,caption,media_url&access_token=${config().instagram.access_token}`
+ );
+
+ response.send("Hello from Firebase!");
+});
