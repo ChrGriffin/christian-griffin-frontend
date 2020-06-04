@@ -92,7 +92,7 @@
         }
 
         public send(): void {
-            if(this.disabled) {
+            if (this.disabled) {
                 return;
             }
 
