@@ -1,5 +1,6 @@
 <template>
     <section class="white">
+        <img :src="require('@/assets/images/about_me.png')" />
         <div class="container flex">
             <div>
                 <h3>Some headline about getting to know me.</h3>
@@ -21,6 +22,18 @@
 
 <style scoped lang="scss">
     @import './../assets/scss/variables';
+
+    section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    img {
+        position: absolute;
+        left: 5%;
+        top: -5%;
+        width: 45rem;
+    }
 
     .container > div {
         width: 50%;

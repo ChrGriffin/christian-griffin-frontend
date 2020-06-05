@@ -18,7 +18,7 @@
     import AboutMe from '@/components/AboutMe.vue';
     import ContactMe from '@/components/ContactMe.vue';
     import MyPrints from '@/components/MyPrints.vue';
-    import InstagramPosts from "@/components/InstagramPosts.vue";
+    import InstagramPosts from '@/components/InstagramPosts.vue';
 
     @Component({
         components: {InstagramPosts, SiteHeader, ToolKit, WorkExperience, AboutMe, ContactMe, MyPrints },
