@@ -49,7 +49,7 @@
 
         img {
             max-width: calc(100% + 2rem);
-            margin: -1rem;
+            margin: -1rem -1rem calc(-1rem - 2px) -1rem;
         }
     }
 </style>

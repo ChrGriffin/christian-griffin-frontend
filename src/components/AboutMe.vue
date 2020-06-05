@@ -31,7 +31,7 @@
     img {
         position: absolute;
         left: 5%;
-        top: -5%;
+        bottom: -50%;
         width: 45rem;
     }
 
@@ -47,4 +47,49 @@
             }
         }
     }
+
+    @media screen and (max-width: 1740px) {
+        img {
+            bottom: -30%;
+        }
+    }
+
+    @media screen and (max-width: 1640px) {
+        img {
+            left: 0;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        img {
+            left: -5%;
+        }
+    }
+
+    @media screen and (max-width: 1275px) {
+        img {
+            left: 0;
+            bottom: 0;
+            width: 35rem;
+        }
+    }
+
+    @media screen and (max-width: 1175px) {
+        img {
+            left: -7%;
+            bottom: 0;
+            width: 40rem;
+        }
+    }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        img {
+            display: none;
+        }
+
+        .container > div {
+            width: 100%;
+        }
+    }
+
 </style>

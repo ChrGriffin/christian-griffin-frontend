@@ -65,4 +65,10 @@
             }
         }
     }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        .container > div {
+            width: 100%;
+        }
+    }
 </style>

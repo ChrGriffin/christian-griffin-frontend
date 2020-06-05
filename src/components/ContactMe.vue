@@ -200,4 +200,10 @@
             }
         }
     }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        section > .container > div {
+            width: 100%;
+        }
+    }
 </style>

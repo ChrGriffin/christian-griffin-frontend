@@ -76,7 +76,7 @@
         height: calc(2rem + #{$navbarLogoHeight});
     }
 
-    @media screen and (max-width: $navbarBreakpoint) {
+    @media screen and (max-width: $mobileBreakpoint) {
 
         .nav-background {
             display: none;

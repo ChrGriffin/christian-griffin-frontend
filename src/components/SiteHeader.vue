@@ -100,31 +100,7 @@
         }
     }
 
-    @media screen and (max-width: $navbarBreakpoint) {
-        header {
-            .container div {
-                width: 65%;
-
-                h1 {
-                    font-size: 3rem;
-                    margin-top: 5rem;
-                }
-
-                h2 {
-                    font-size: 1.4rem;
-                    margin-bottom: 8rem;
-                }
-            }
-
-            img {
-                width: 40%;
-                right: 0;
-                bottom: -35%;
-            }
-        }
-    }
-
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: $mobileBreakpoint) {
         header {
             .container div {
                 width: 100%;
