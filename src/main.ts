@@ -6,6 +6,9 @@ import VueMatchHeights from 'vue-match-heights';
 Vue.config.productionTip = false;
 
 Vue.use(VueMatchHeights);
+window.addEventListener('resize', () => {
+  document.dispatchEvent(new CustomEvent('matchheight', {}));
+});
 
 new Vue({
   router,

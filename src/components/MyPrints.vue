@@ -2,7 +2,7 @@
     <section class="white">
         <div class="container">
             <h3>Sometimes I make simple print designs.</h3>
-            <div class="flex" v-match-heights="{ el: ['.box'] }">
+            <div class="flex">
                 <print-item v-for="print in prints" :print="print" :key="print.title" />
             </div>
         </div>
