@@ -16,13 +16,11 @@ class FakeRepository {
           title: 'A Shirt',
           url: 'https://ashirt.com',
           image: 'https://ashirt.com/image.jpg',
-          price: 19.99,
         },
         {
           title: 'Another Shirt',
           url: 'https://anothershirt.com',
           image: 'https://anothershirt.com/image.jpg',
-          price: 20,
         },
       ]);
     });

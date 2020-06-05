@@ -2,8 +2,6 @@
     <extruded-box background-color="white">
         <a target="_blank" :href="print.url">
             <img :src="print.image" :alt="`${print.title} photo`" />
-            <h4>{{ print.title }}</h4>
-            <h5>${{ print.price.toFixed(2) }} USD</h5>
         </a>
     </extruded-box>
 </template>
@@ -51,16 +49,7 @@
 
         img {
             max-width: calc(100% + 2rem);
-            margin: -1rem -1rem 1rem -1rem;
-        }
-
-        h4 {
-            margin-bottom: 0.5rem;
-            white-space: nowrap;
-        }
-
-        h5 {
-            margin-bottom: 0;
+            margin: -1rem;
         }
     }
 </style>
