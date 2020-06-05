@@ -64,6 +64,7 @@
 
     .flex {
         display: flex;
+        flex-wrap: wrap;
     }
 
     section.white {

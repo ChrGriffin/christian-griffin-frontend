@@ -68,4 +68,21 @@
             font-size: 1rem;
         }
     }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        .box {
+            flex-basis: 100%;
+            width: 100%;
+            margin-bottom: 2rem;
+
+            &:first-child {
+                margin-left: 1rem;
+            }
+
+            &:last-child {
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
 </style>
