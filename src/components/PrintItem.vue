@@ -52,4 +52,38 @@
             margin: -1rem -1rem calc(-1rem - 2px) -1rem;
         }
     }
+
+    @media screen and (min-width: 560px) and (max-width: $mobileBreakpoint) {
+        .box {
+            flex: unset;
+            width: calc(50% - 2rem - 26px);
+            margin-bottom: 2rem;
+
+            &:nth-of-type(odd) {
+                margin-left: 0;
+            }
+
+            &:nth-of-type(even) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n+3) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 559px) {
+        .box {
+            flex: unset;
+            width: calc(100%);
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 </style>

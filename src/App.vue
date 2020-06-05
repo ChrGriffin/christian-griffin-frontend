@@ -55,6 +55,10 @@
 
     section {
         padding: $sectionPadding;
+
+        @media screen and (max-width: 799px) {
+            padding: $sectionPadding / 2;
+        }
     }
 
     .container {
