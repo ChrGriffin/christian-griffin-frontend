@@ -61,7 +61,7 @@
 
             background-color: $grey;
             border-right: 10px solid $darkGreyBlue;
-            border-top: 10px solid $greyBlue;
+            border-top: 10px solid $grey;
 
             &::before {
                 background-color: $white;
