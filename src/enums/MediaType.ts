@@ -1,6 +1,6 @@
 enum MediaType {
     video = 'VIDEO',
-    image = 'IMAGE'
+    image = 'IMAGE',
 }
 
 export default MediaType;
