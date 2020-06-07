@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <h3>It's been a privilege to work with these great companies.</h3>
-            <div class="flex work-experience" v-match-heights="{ el: ['.work-experience .box'] }">
+            <div class="flex work-experience" v-match-heights="{ el: ['.work-experience .box'], disabled: 1075 }">
                 <work-experience-item v-for="job in jobs" :job="job" :key="job.company" />
             </div>
         </div>
