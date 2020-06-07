@@ -205,5 +205,17 @@
         section > .container > div {
             width: 100%;
         }
+
+        form > div > div {
+            flex-basis: 100%;
+
+            &:first-child {
+                padding-right: 0;
+            }
+
+            &:last-child {
+                padding-left: 0;
+            }
+        }
     }
 </style>
