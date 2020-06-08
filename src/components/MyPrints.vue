@@ -40,8 +40,4 @@
     section {
         text-align: center;
     }
-
-    h3 {
-        margin-bottom: 6rem;
-    }
 </style>

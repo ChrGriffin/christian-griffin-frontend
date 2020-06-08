@@ -135,10 +135,6 @@
         }
     }
 
-    h3 {
-        margin-bottom: 4rem;
-    }
-
     form > div > div {
         width: 50%;
         flex: 1;

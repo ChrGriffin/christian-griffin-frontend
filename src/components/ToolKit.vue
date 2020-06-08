@@ -2,7 +2,7 @@
     <section id="tool-belt" class="white">
         <div class="container flex">
             <div>
-                <h3>I solve problems using a wide range of tools.</h3>
+                <h3 class="text-content">I solve problems using a wide range of tools.</h3>
                 <p>Here, I will write something about tools. I will probably expand on how having multiple tools at your disposal is helpful for solving problems, like how PHP is good for some issues and Node.js is better for others. Maybe it will be somewhat insightful.</p>
                 <div class="flex">
                     <div>

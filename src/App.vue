@@ -82,7 +82,27 @@
     h3 {
         font-size: 2.4rem;
         font-weight: bold;
-        margin-bottom: 2rem;
+        margin-bottom: 6rem;
+
+        @media screen and (max-width: $mobileBreakpoint) {
+            margin-bottom: 4rem;
+        }
+
+        @media screen and (max-width: $tinyBreakpoint) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    h3.text-content {
+        margin-bottom: 3rem;
+
+        @media screen and (max-width: $mobileBreakpoint) {
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (max-width: $tinyBreakpoint) {
+            margin-bottom: 2rem;
+        }
     }
 
     h4 {
