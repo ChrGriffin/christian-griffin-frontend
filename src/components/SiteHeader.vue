@@ -1,20 +1,27 @@
 <template>
     <header id="header">
         <div class="container flex">
-            <div>
+            <div class="title">
                 <h1>Hi, I'm Christian.</h1>
                 <h2>I'm a web developer with a passion for PHP, Laravel, Vue.js, and Typescript.</h2>
             </div>
 
-            <img :src="require('./../assets/images/header_profile.png')" />
+            <div class="image">
+                <parallax direction="down">
+                    <img :src="require('./../assets/images/header_profile.png')" />
+                </parallax>
+            </div>
         </div>
     </header>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    import Parallax from 'vue-parallaxy';
 
-    @Component
+    @Component({
+        components: { Parallax },
+    })
     export default class SiteHeader extends Vue {
     }
 </script>
@@ -29,7 +36,7 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
 
-        .container div {
+        .container .title {
             width: calc(50% - 2rem);
 
             h1 {
@@ -46,37 +53,34 @@
             }
         }
 
-        img {
+        .image {
             position: absolute;
             right: 5%;
             z-index: 998;
+            width: 50%;
+
+            img {
+                height: 90%;
+                width: 90%;
+            }
         }
     }
 
     @media screen and (max-width: 1440px) {
         header {
-            .container div {
+            .container .title {
                 width: 50%;
             }
 
-            img {
+            .image {
                 right: 0;
-            }
-        }
-    }
-
-    @media screen and (max-width: 1315px) {
-        header {
-
-            img {
-                right: -5%;
             }
         }
     }
 
     @media screen and (max-width: 1200px) {
         header {
-            .container div {
+            .container .title {
                 width: 50%;
 
                 h1 {
@@ -90,17 +94,20 @@
                 }
             }
 
-            img {
-                width: 40%;
+            .image {
                 right: 5%;
-                bottom: -15%;
+                bottom: -75%;
+
+                img {
+                    height: 60%;
+                }
             }
         }
     }
 
     @media screen and (max-width: $mobileBreakpoint) {
         header {
-            .container div {
+            .container .title {
                 width: 100%;
                 text-align: center;
 
@@ -115,7 +122,7 @@
                 }
             }
 
-            img {
+            .image {
                 display: none;
             }
         }
