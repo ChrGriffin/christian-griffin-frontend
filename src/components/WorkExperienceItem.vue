@@ -73,16 +73,9 @@
         .box {
             flex-basis: 100%;
             width: 100%;
+            margin-left: 0;
+            margin-right: 0;
             margin-bottom: 2rem;
-
-            &:first-child {
-                margin-left: 1rem;
-            }
-
-            &:last-child {
-                margin-right: 1rem;
-                margin-bottom: 0;
-            }
         }
     }
 </style>

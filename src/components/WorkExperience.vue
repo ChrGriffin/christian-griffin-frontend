@@ -44,5 +44,13 @@
 
     h3 {
         margin-bottom: 6rem;
+
+        @media screen and (max-width: $mobileBreakpoint) {
+            margin-bottom: 4rem;
+        }
+
+        @media screen and (max-width: $tinyBreakpoint) {
+            margin-bottom: 2rem;
+        }
     }
 </style>
