@@ -1,16 +1,14 @@
 <template>
     <div>
         <div class="nav-wrapper">
-            <a href="#" class="logo" v-scroll-to="'#header'">
-                <img :src="require('./../assets/images/logo.png')" />
-            </a>
-            <nav>
+            <img :src="require('./../assets/images/logo.png')" @click="toggleActive" />
+            <nav :class="(active ? 'active' : '')">
                 <ul>
-                    <li><a href="#" v-scroll-to="'#tool-belt'">Toolbelt</a></li>
-                    <li><a href="#" v-scroll-to="'#experience'">Experience</a></li>
-                    <li><a href="#" v-scroll-to="'#about-me'">About</a></li>
-                    <li><a href="#" v-scroll-to="'#contact-me'">Contact</a></li>
-                    <li><a href="#" v-scroll-to="'#prints'">Prints</a></li>
+                    <li><a href="#" v-scroll-to="'#tool-belt'" @click="toggleActive">Toolbelt</a></li>
+                    <li><a href="#" v-scroll-to="'#experience'" @click="toggleActive">Experience</a></li>
+                    <li><a href="#" v-scroll-to="'#about-me'" @click="toggleActive">About</a></li>
+                    <li><a href="#" v-scroll-to="'#contact-me'" @click="toggleActive">Contact</a></li>
+                    <li><a href="#" v-scroll-to="'#prints'" @click="toggleActive">Prints</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,6 +22,11 @@
 
     @Component
     export default class SiteNavigation extends Vue {
+        public active: boolean = false;
+
+        public toggleActive(): void {
+            this.active = !this.active;
+        }
     }
 </script>
 
@@ -38,20 +41,14 @@
         z-index: 999;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
+        overflow: hidden;
 
-        .logo {
-            border-bottom: 0;
-
-            &:hover {
-                border-bottom: 0;
-            }
-
-            img {
-                height: $navbarLogoHeight;
-                display: inline-block;
-                z-index: 999;
-            }
+        img {
+            height: $navbarLogoHeight;
+            display: inline-block;
+            position: relative;
+            z-index: 999;
         }
 
         nav {
@@ -106,7 +103,30 @@
             }
 
             nav {
-                display: none;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 100%;
+                background-color: $aqua;
+                text-align: center;
+                padding-top: 10vh;
+                z-index: 998;
+                width: 100%;
+                transition: left 0.25s ease;
+
+                &.active {
+                    left: 0;
+                    transition: left 0.25s ease;
+                }
+
+                ul li {
+                    display: block;
+                    padding-top: 2rem;
+
+                    a {
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     }
