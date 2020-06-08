@@ -53,11 +53,15 @@
         }
     }
 
-    section {
+    section, header {
         padding: $sectionPadding;
 
         @media screen and (max-width: 799px) {
             padding: $sectionPadding / 2;
+        }
+
+        @media screen and (max-width: $tinyBreakpoint) {
+            padding: $sectionPadding / 4;
         }
     }
 

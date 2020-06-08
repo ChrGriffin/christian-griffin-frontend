@@ -26,10 +26,11 @@
         background-color: $aqua;
         position: relative;
         overflow: hidden;
-        padding: 4rem 2rem 2rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
 
         .container div {
-            width: calc(50% - 6rem);
+            width: calc(50% - 2rem);
 
             h1 {
                 margin-top: 16rem;
@@ -55,7 +56,7 @@
     @media screen and (max-width: 1440px) {
         header {
             .container div {
-                width: calc(50% - 4rem);
+                width: 50%;
             }
 
             img {
@@ -66,9 +67,6 @@
 
     @media screen and (max-width: 1315px) {
         header {
-            .container div {
-                width: calc(50% - 2rem);
-            }
 
             img {
                 right: -5%;
