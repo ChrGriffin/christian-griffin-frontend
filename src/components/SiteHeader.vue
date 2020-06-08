@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header id="header">
         <div class="container flex">
             <div>
                 <h1>Hi, I'm Christian.</h1>

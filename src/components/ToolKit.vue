@@ -1,5 +1,5 @@
 <template>
-    <section class="white">
+    <section id="tool-belt" class="white">
         <div class="container flex">
             <div>
                 <h3>I solve problems using a wide range of tools.</h3>

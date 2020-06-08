@@ -1,5 +1,5 @@
 <template>
-    <section class="white">
+    <section id="about-me" class="white">
         <img :src="require('@/assets/images/about_me.png')" />
         <div class="container flex">
             <div>

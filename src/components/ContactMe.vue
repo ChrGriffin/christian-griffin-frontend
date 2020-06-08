@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="contact-me">
         <div class="container flex">
             <div>
                 <h3>Feel free to get in touch.</h3>

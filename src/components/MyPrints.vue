@@ -1,5 +1,5 @@
 <template>
-    <section class="white">
+    <section id="prints" class="white">
         <div class="container">
             <h3>Sometimes I make simple print designs.</h3>
             <div class="flex">

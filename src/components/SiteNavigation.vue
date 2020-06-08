@@ -1,14 +1,16 @@
 <template>
     <div>
         <div class="nav-wrapper">
-            <img :src="require('./../assets/images/logo.png')" />
+            <a href="#" class="logo" v-scroll-to="'#header'">
+                <img :src="require('./../assets/images/logo.png')" />
+            </a>
             <nav>
                 <ul>
-                    <li><a href="">Toolbelt</a></li>
-                    <li><a href="">Experience</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Prints</a></li>
+                    <li><a href="#" v-scroll-to="'#tool-belt'">Toolbelt</a></li>
+                    <li><a href="#" v-scroll-to="'#experience'">Experience</a></li>
+                    <li><a href="#" v-scroll-to="'#about-me'">About</a></li>
+                    <li><a href="#" v-scroll-to="'#contact-me'">Contact</a></li>
+                    <li><a href="#" v-scroll-to="'#prints'">Prints</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,10 +40,18 @@
         left: 0;
         width: 100%;
 
-        img {
-            height: $navbarLogoHeight;
-            display: inline-block;
-            z-index: 999;
+        .logo {
+            border-bottom: 0;
+
+            &:hover {
+                border-bottom: 0;
+            }
+
+            img {
+                height: $navbarLogoHeight;
+                display: inline-block;
+                z-index: 999;
+            }
         }
 
         nav {
