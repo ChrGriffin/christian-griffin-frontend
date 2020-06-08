@@ -57,20 +57,24 @@
         width: 50%;
         margin-left: auto;
 
-        > div.flex div {
-            flex: 1;
-            padding: 0 1rem;
+        > div.flex {
+            flex-wrap: nowrap;
 
-            &:first-child {
-                padding-left: 0;
-            }
+            div {
+                flex: 1;
+                padding: 0 1rem;
 
-            &:last-child {
-                padding-right: 0;
-            }
+                &:first-child {
+                    padding-left: 0;
+                }
 
-            ul li {
-                font-size: 1.2rem;
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                ul li {
+                    font-size: 1.2rem;
+                }
             }
         }
     }
@@ -82,16 +86,20 @@
     }
 
     @media screen and (max-width: $tinyBreakpoint) {
-        .container > div > div.flex div {
-            flex-basis: 100%;
-            padding: 0 0 2rem 1rem;
+        .container > div > div.flex {
+            flex-wrap: wrap;
 
-            &:first-child {
-                padding-left: 1rem;
-            }
+            div {
+                flex-basis: 100%;
+                padding: 0 0 2rem 1rem;
 
-            &:last-child {
-                padding-bottom: 0;
+                &:first-child {
+                    padding-left: 1rem;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
             }
         }
     }
