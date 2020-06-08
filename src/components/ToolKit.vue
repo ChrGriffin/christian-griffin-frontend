@@ -59,6 +59,15 @@
 
         > div.flex div {
             flex: 1;
+            padding: 0 1rem;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
 
             ul li {
                 font-size: 1.2rem;
@@ -69,6 +78,21 @@
     @media screen and (max-width: $mobileBreakpoint) {
         .container > div {
             width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $tinyBreakpoint) {
+        .container > div > div.flex div {
+            flex-basis: 100%;
+            padding: 0 0 2rem 1rem;
+
+            &:first-child {
+                padding-left: 1rem;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
         }
     }
 </style>
