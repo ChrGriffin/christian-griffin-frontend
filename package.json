@@ -15,7 +15,6 @@
     "validate.js": "^0.13.1",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
-    "vue-match-heights": "^0.1.1",
     "vue-parallaxy": "^1.1.1",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.3",
