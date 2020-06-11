@@ -5,19 +5,12 @@
                 <h1>Hi, I'm Christian.</h1>
                 <h2>I'm a web developer with a passion for PHP, Laravel, Vue.js, and Typescript.</h2>
             </div>
-
-            <div class="image">
-                <parallax direction="down">
-                    <img :src="require('./../assets/images/header_profile.png')" />
-                </parallax>
-            </div>
         </div>
     </header>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import Parallax from 'vue-parallaxy';
 
     @Component({
         components: { Parallax },
