@@ -1,7 +1,12 @@
 <template>
     <section id="about-me" class="white">
-        <img :src="require('@/assets/images/about_me.png')" />
         <div class="container flex">
+            <div>
+                <parallax>
+                    <img :src="require('@/assets/images/about_me.png')" />
+                </parallax>
+            </div>
+
             <div>
                 <h3 class="text-content">Some headline about getting to know me.</h3>
                 <p>I'm a passionate and enthusiastic PHP developer, working primarily with the Laravel framework. While my focus is primarily back-end PHP, I have additional experience with JavaScript (Node.js and Vue), DevOps, and motion graphics animation.</p>
@@ -14,8 +19,11 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    import Parallax from '@/components/Parallax.vue';
 
-    @Component
+    @Component({
+        components: {Parallax},
+    })
     export default class AboutMe extends Vue {
     }
 </script>
@@ -28,11 +36,9 @@
         overflow: hidden;
     }
 
-    img {
+    .parallax-container {
         position: absolute;
-        left: 5%;
-        bottom: -50%;
-        width: 45rem;
+        top: -15rem;
     }
 
     .container > div {
@@ -49,41 +55,36 @@
     }
 
     @media screen and (max-width: 1740px) {
-        img {
-            bottom: -30%;
-        }
-    }
-
-    @media screen and (max-width: 1640px) {
-        img {
+        .parallax-container {
             left: 0;
         }
     }
 
     @media screen and (max-width: 1440px) {
-        img {
-            left: -5%;
+        .parallax-container {
+            left: -5rem;
         }
     }
 
     @media screen and (max-width: 1275px) {
-        img {
+        .parallax-container {
+            top: -10rem;
             left: 0;
-            bottom: 0;
-            width: 35rem;
+
+            img {
+                width: 80%;
+            }
         }
     }
 
     @media screen and (max-width: 1175px) {
-        img {
-            left: -7%;
-            bottom: 0;
-            width: 40rem;
+        .parallax-container {
+            left: -5rem;
         }
     }
 
     @media screen and (max-width: $mobileBreakpoint) {
-        img {
+        .parallax-container {
             display: none;
         }
 
