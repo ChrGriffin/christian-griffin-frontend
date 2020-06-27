@@ -33,31 +33,38 @@
         background-color: $aqua;
         position: relative;
         overflow: hidden;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding: 0;
+        height: 100vh;
 
-        .container > div {
-            width: calc(50% - 2rem);
+        .container {
+            align-items: center;
+            height: 100vh;
 
-            h1 {
-                margin-top: 16rem;
-                font-size: 4rem;
-                letter-spacing: -2px;
-                font-weight: bold;
-            }
+            > div {
+                width: calc(50% - 2rem);
 
-            h2 {
-                margin-top: 1rem;
-                margin-bottom: 16rem;
-                font-size: 1.8rem;
+                h1 {
+                    font-size: 4rem;
+                    letter-spacing: -2px;
+                    font-weight: bold;
+                }
+
+                h2 {
+                    margin-top: 1rem;
+                    font-size: 1.8rem;
+                }
             }
         }
 
         .parallax-container {
             position: absolute;
-            right: 5%;
+            right: 15rem;
             z-index: 998;
-            bottom: -10rem;
+            top: -10rem;
+
+            img {
+                width: 120%;
+            }
         }
     }
 
