@@ -2,6 +2,11 @@
     <section id="tool-belt" class="white">
         <div class="container flex">
             <div>
+                <parallax>
+                    <img :src="require('@/assets/images/tool_belt.png')" />
+                </parallax>
+            </div>
+            <div>
                 <h3 class="text-content">I solve problems using a wide range of tools.</h3>
                 <p>Here, I will write something about tools. I will probably expand on how having multiple tools at your disposal is helpful for solving problems, like how PHP is good for some issues and Node.js is better for others. Maybe it will be somewhat insightful.</p>
                 <div class="flex">
@@ -44,8 +49,10 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-
-    @Component
+    import Parallax from "@/components/Parallax.vue";
+    @Component({
+        components: {Parallax}
+    })
     export default class ToolKit extends Vue {
     }
 </script>
@@ -53,9 +60,19 @@
 <style scoped lang="scss">
     @import './../assets/scss/variables';
 
+    section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .parallax-container {
+        position: absolute;
+        top: -20rem;
+        left: 0;
+    }
+
     .container > div {
         width: 50%;
-        margin-left: auto;
 
         > div.flex {
             flex-wrap: nowrap;
@@ -79,9 +96,48 @@
         }
     }
 
+    @media screen and (max-width: 1740px) {
+        .parallax-container {
+            left: -5rem;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        .parallax-container {
+            left: -10rem;
+        }
+    }
+
+    @media screen and (max-width: 1275px) {
+        .parallax-container {
+            top: -15rem;
+            left: -5rem;
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1175px) {
+        .parallax-container {
+            left: -7.5rem;
+        }
+    }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        .parallax-container {
+            display: none;
+        }
+    }
+
     @media screen and (max-width: $mobileBreakpoint) {
         .container > div {
             width: 100%;
+        }
+
+        .parallax-container {
+            display: none;
         }
     }
 
