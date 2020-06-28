@@ -54,6 +54,12 @@
                     </div>
                 </form>
             </div>
+
+            <div>
+                <parallax>
+                    <img :src="require('./../assets/images/contact_me.png')" />
+                </parallax>
+            </div>
         </div>
     </section>
 </template>
@@ -63,8 +69,11 @@
     import axios from 'axios';
     import validate from 'validate.js';
     import ContactFormRules from '@/rules/ContactForm';
+    import Parallax from "@/components/Parallax.vue";
 
-    @Component({})
+    @Component({
+        components: {Parallax}
+    })
     export default class ContactMe extends Vue {
 
         public name: string = '';
@@ -129,9 +138,21 @@
 
     section {
         background-color: $darkGreyBlue;
+        position: relative;
+        overflow: hidden;
 
         > .container > div {
             width: 50%;
+        }
+    }
+
+    .parallax-container {
+        position: absolute;
+        top: -15rem;
+        left: 50%;
+
+        img {
+            width: 100%;
         }
     }
 
@@ -197,9 +218,37 @@
         }
     }
 
+    @media screen and (max-width: 1740px) {
+        .parallax-container {
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        .parallax-container {
+            right: -5rem;
+        }
+    }
+
+    @media screen and (max-width: 1275px) {
+        .parallax-container {
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1175px) {
+        .parallax-container {
+            right: -5rem;
+        }
+    }
+
     @media screen and (max-width: $mobileBreakpoint) {
         section > .container > div {
             width: 100%;
+        }
+
+        .parallax-container {
+            display: none;
         }
 
         form > div > div {
