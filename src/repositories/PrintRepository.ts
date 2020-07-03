@@ -11,9 +11,9 @@ export default class PrintRepository {
                     image: 'https://res.cloudinary.com/teepublic/image/private/s---ltaLt_9--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1590635523/production/designs/10682717_1.jpg',
                 },
                 {
-                    title: '[Glare silently.]',
-                    url: 'https://www.teepublic.com/t-shirt/7189841-glare-silently?store_id=91685',
-                    image: 'https://res.cloudinary.com/teepublic/image/private/s--EMc5MGp6--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1576298287/production/designs/7189841_0.jpg',
+                    title: 'Everyone disliked that.',
+                    url: 'https://www.teepublic.com/t-shirt/11870109-everyone-disliked-that?store_id=91685',
+                    image: 'https://res.cloudinary.com/teepublic/image/private/s--lmoGyrw7--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1593702891/production/designs/11870109_0.jpg',
                 },
                 {
                     title: '\'fingers\'',
