@@ -51,7 +51,7 @@
 
             <div>
                 <parallax>
-                    <img :src="require('./../assets/images/contact_me.png')"/>
+                    <img :src="require('./../assets/images/contact_me.png')" />
                 </parallax>
             </div>
         </div>
