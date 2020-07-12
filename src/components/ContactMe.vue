@@ -69,10 +69,10 @@
     import axios from 'axios';
     import validate from 'validate.js';
     import ContactFormRules from '@/rules/ContactForm';
-    import Parallax from "@/components/Parallax.vue";
+    import Parallax from '@/components/Parallax.vue';
 
     @Component({
-        components: {Parallax}
+        components: {Parallax},
     })
     export default class ContactMe extends Vue {
 

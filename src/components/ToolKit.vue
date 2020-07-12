@@ -49,9 +49,10 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import Parallax from "@/components/Parallax.vue";
+    import Parallax from '@/components/Parallax.vue';
+
     @Component({
-        components: {Parallax}
+        components: {Parallax},
     })
     export default class ToolKit extends Vue {
     }
