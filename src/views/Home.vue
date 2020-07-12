@@ -3,6 +3,7 @@
         <site-header/>
         <tool-kit />
         <work-experience />
+        <spotify-currently-playing />
         <about-me />
         <instagram-posts />
         <contact-me />
@@ -19,9 +20,12 @@
     import ContactMe from '@/components/ContactMe.vue';
     import MyPrints from '@/components/MyPrints.vue';
     import InstagramPosts from '@/components/InstagramPosts.vue';
+    import SpotifyCurrentlyPlaying from '@/components/SpotifyCurrentlyPlaying.vue';
 
     @Component({
-        components: {InstagramPosts, SiteHeader, ToolKit, WorkExperience, AboutMe, ContactMe, MyPrints },
+        components: {
+            SiteHeader, ToolKit, WorkExperience, SpotifyCurrentlyPlaying, AboutMe, InstagramPosts, ContactMe, MyPrints,
+        },
     })
     export default class Home extends Vue {
     }
