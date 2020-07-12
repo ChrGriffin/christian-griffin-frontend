@@ -6,47 +6,41 @@
                 <form>
                     <div class="flex">
                         <div>
-                            <label
-                                    for="contact-name"
-                                    :class="(this.errors.name.length > 0 ? 'error' : '')">
+                            <label for="contact-name"
+                                   :class="(this.errors.name.length > 0 ? 'error' : '')">
                                 Name
                             </label>
-                            <input
-                                    v-model="name"
-                                    @blur="validateField('name')"
-                                    id="contact-name"
-                                    :class="(this.errors.name.length > 0 ? 'error' : '')"
-                                    name="name"
-                                    type="text" />
+                            <input v-model="name"
+                                   @blur="validateField('name')"
+                                   id="contact-name"
+                                   :class="(this.errors.name.length > 0 ? 'error' : '')"
+                                   name="name"
+                                   type="text"/>
                         </div>
 
                         <div>
-                            <label
-                                    for="contact-email"
-                                    :class="(this.errors.email.length > 0 ? 'error' : '')">
+                            <label for="contact-email"
+                                   :class="(this.errors.email.length > 0 ? 'error' : '')">
                                 Email
                             </label>
-                            <input
-                                    v-model="email"
-                                    @blur="validateField('email')"
-                                    id="contact-email" name="email"
-                                    :class="(this.errors.email.length > 0 ? 'error' : '')"
-                                    type="email" />
+                            <input v-model="email"
+                                   @blur="validateField('email')"
+                                   id="contact-email" name="email"
+                                   :class="(this.errors.email.length > 0 ? 'error' : '')"
+                                   type="email"/>
                         </div>
                     </div>
 
-                    <label
-                            for="contact-message"
-                            :class="(this.errors.message.length > 0 ? 'error' : '')">
+                    <label for="contact-message"
+                           :class="(this.errors.message.length > 0 ? 'error' : '')">
                         Message
                     </label>
-                    <textarea
-                            v-model="message"
-                            @blur="validateField('message')"
-                            id="contact-message"
-                            :class="(this.errors.message.length > 0 ? 'error' : '')"
-                            name="message"
-                            rows="12">
+                    <textarea v-model="message"
+                              @blur="validateField('message')"
+                              id="contact-message"
+                              :class="(this.errors.message.length > 0 ? 'error' : '')"
+                              name="message"
+                              rows="12">
                     </textarea>
 
                     <div class="button-container">
@@ -57,7 +51,7 @@
 
             <div>
                 <parallax>
-                    <img :src="require('./../assets/images/contact_me.png')" />
+                    <img :src="require('./../assets/images/contact_me.png')"/>
                 </parallax>
             </div>
         </div>
