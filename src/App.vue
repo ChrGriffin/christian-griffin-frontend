@@ -21,6 +21,7 @@
 <style lang="scss">
     @import '~reset-css/reset.css';
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     @import './assets/scss/variables';
 
     #app {

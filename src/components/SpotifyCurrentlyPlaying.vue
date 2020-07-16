@@ -1,5 +1,11 @@
 <template>
     <section v-if="currentlyPlaying !== null">
+        <div class="api-indicator">
+            <a target="_blank" href="https://gist.github.com/ChrGriffin/0250fd6d1301b2705a2159f50b34b815">
+                Live from <span class="fa fa-spotify"></span>
+            </a>
+        </div>
+
         <div class="container flex">
             <div>
                 <h3>What I'm listening to.</h3>
@@ -37,7 +43,9 @@
         }
 
         public async getCurrentlyPlaying() {
-            this.currentlyPlaying = await this.currentlyPlayingRepository.get();
+            try {
+                this.currentlyPlaying = await this.currentlyPlayingRepository.get();
+            } catch (error) { /* do nothing */ }
 
             setTimeout(() => {
                 this.getCurrentlyPlaying();
@@ -53,6 +61,30 @@
         background-color: $black;
         padding-top: 2rem;
         padding-bottom: 2rem;
+        position: relative;
+
+        .api-indicator {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+
+            a {
+                font-size: 0.8rem;
+                opacity: 0.4;
+                font-style: italic;
+                font-weight: normal;
+                color: $white;
+                border-bottom: 0;
+
+                &:hover {
+                    border-bottom: 0;
+                }
+
+                span {
+                    padding-left: 4px;
+                }
+            }
+        }
     }
 
     .container {
