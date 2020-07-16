@@ -8,8 +8,8 @@
                 <img class="powered-logo" :src="require('./../assets/images/vue_logo.png')" />
             </a>
 
-            <a target="_blank" href="https://firebase.google.com/">
-                <img class="powered-logo" :src="require('./../assets/images/firebase_logo.png')" />
+            <a target="_blank" href="https://laravel.com/">
+                <img class="powered-logo" :src="require('./../assets/images/laravel_logo.png')" />
             </a>
         </p>
     </footer>
