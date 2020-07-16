@@ -1,7 +1,14 @@
 <template>
     <section class="flex">
+        <div class="api-indicator">
+            <a target="_blank" href="https://bitbucket.org/ChrGriffin/christian-griffin-app/src/master/Modules/ChristianGriffin/Services/Instagram/InstagramApi.php">
+                Retrieved from <span class="fa fa-instagram"></span>
+            </a>
+        </div>
+
         <a v-for="post in instagramPosts"
            target="_blank"
+           class="instagram-post"
            :href="post.url"
            :style="{ backgroundImage: `url(${post.image})` }"></a>
     </section>
@@ -36,7 +43,7 @@
         margin-bottom: -2px;
     }
 
-    a {
+    a.instagram-post {
         border-bottom: 0;
         flex: 1;
         display: none;
@@ -50,12 +57,17 @@
         }
     }
 
+    .api-indicator a {
+        opacity: 1;
+        text-shadow: 1px 1px 5px $black;
+    }
+
     img {
         width: 100%;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        a {
+        a.instagram-post {
             display: inline-block;
 
             &:nth-child(n+6) {
@@ -65,7 +77,7 @@
     }
 
     @media screen and (min-width: 1200px) and (max-width: 1440px) {
-        a {
+        a.instagram-post {
             display: inline-block;
             padding-top: 14rem;
 
@@ -76,7 +88,7 @@
     }
 
     @media screen and (min-width: 1441px) and (max-width: 1920px) {
-        a {
+        a.instagram-post {
             display: inline-block;
             padding-top: 16rem;
 
@@ -87,7 +99,7 @@
     }
 
     @media screen and (min-width: 1921px) and (max-width: 2220px) {
-        a {
+        a.instagram-post {
             display: inline-block;
             padding-top: 14rem;
 
@@ -98,7 +110,7 @@
     }
 
     @media screen and (min-width: 2221px) and (max-width: 3100px) {
-        a {
+        a.instagram-post {
             display: inline-block;
             padding-top: 14rem;
 
@@ -109,7 +121,7 @@
     }
 
     @media screen and (min-width: 3101px) {
-        a {
+        a.instagram-post {
             display: inline-block;
             padding-top: 14rem;
         }

@@ -56,6 +56,7 @@
 
     section, header {
         padding: $sectionPadding;
+        position: relative;
 
         @media screen and (max-width: 799px) {
             padding: $sectionPadding / 2;
@@ -125,6 +126,29 @@
 
         li {
             padding-bottom: 0.2rem;
+        }
+    }
+
+    .api-indicator {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        a {
+            font-size: 0.8rem;
+            opacity: 0.4;
+            font-style: italic;
+            font-weight: normal;
+            color: $white;
+            border-bottom: 0;
+
+            &:hover {
+                border-bottom: 0;
+            }
+
+            span {
+                padding-left: 4px;
+            }
         }
     }
 </style>

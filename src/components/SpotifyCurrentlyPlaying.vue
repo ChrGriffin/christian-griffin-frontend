@@ -62,29 +62,6 @@
         padding-top: 2rem;
         padding-bottom: 2rem;
         position: relative;
-
-        .api-indicator {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-
-            a {
-                font-size: 0.8rem;
-                opacity: 0.4;
-                font-style: italic;
-                font-weight: normal;
-                color: $white;
-                border-bottom: 0;
-
-                &:hover {
-                    border-bottom: 0;
-                }
-
-                span {
-                    padding-left: 4px;
-                }
-            }
-        }
     }
 
     .container {
